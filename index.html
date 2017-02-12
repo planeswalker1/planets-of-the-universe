@@ -3,4 +3,14 @@ layout: default
 ---
 
 <h1>Planets of the Universe</h1>
-<p>Lots of planets in the universe!</p>
+<p>A planet is an astronomical object orbiting a star or stellar remnant that is massive enough to be rounded by its own gravity, is not massive enough to cause thermonuclear fusion, and has cleared its neighbouring region of planetesimals.</p>
+
+<h2>Recently Discovered Planets</h2>
+<ul>
+  {% for news in site.categories.recently-discovered limit: 2 %}
+  <li>
+    <a href="{{news.source}}">{{news.title}}</a>
+    <p>{{news.meta}}</p>
+  </li>
+  {% endfor %}
+</ul>
