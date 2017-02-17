@@ -8,10 +8,10 @@ layout: default
 <h2>types of Planets</h2>
 
 <ol>
-  {% for planet in site.categories.planet-type %}
+  {% for planet in site.data.planet-types %}
     <li>
       <a href="#">{{planet.title}}</a>
-      {{planet.content}}
+      {{planet.content | markdownify}}
     </li>
   {% endfor %}
 </ol>
