@@ -4,6 +4,13 @@ html {
   padding: 0;
 }
 
+.mainPic {
+  background: #000531 url("../img/nebula.jpg") no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  padding: 1em;
+}
+
 .active {
   background: #000531;
   color: white;
