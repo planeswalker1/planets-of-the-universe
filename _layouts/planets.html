@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<strong>Planet</strong>
+
+<nav>
+  <ul>
+    {% for planet in site.data.planet-types %}
+      <li>
+        <a href="{{site.baseurl}}/planets/{{planet.folder}}" class="{% if page.url contains planet.folder %}active{% endif %}">{{planet.title}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{{content}}
