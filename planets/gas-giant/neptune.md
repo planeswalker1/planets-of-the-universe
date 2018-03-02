@@ -9,7 +9,8 @@ orbit: 164.8 years
 radius: 24767 km
 tilt: 28°
 image: neptune.jpg
-source: http://en.wikipedia.org/wiki/Neptune
+source: https://en.wikipedia.org/wiki/Neptune
+header-class: header--planets
 ---
 
 *Neptune* is the eighth and farthest planet from the Sun in the Solar System. It is the fourth-largest planet by diameter and the third-largest by mass. Among the gaseous planets in the solar system, Neptune is the most dense.

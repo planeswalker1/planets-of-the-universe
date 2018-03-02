@@ -1,6 +1,6 @@
 ---
 ---
 
-{% include css/main.css %}
-{% include css/nav.css %}
-{% include css/masthead.css %}
+{% include_relative base.css %}
+{% include_relative layout.css %}
+{% include_relative module.css %}

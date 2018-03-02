@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{% if page.title %} {{page.title}} · {% endif %}Planets of the Universe{% if page.titleAfter %} · {{page.titleAfter}} {% endif %}</title>
-    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
-    <meta name="description" content="{{page.meta}}">
-  </head>
-  <body>
-    <header class="masthead {{page.mastheadClass}}">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="{{ page.meta }}">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}Planets of the Universe{% if page.title-after %} · {{ page.title-after }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header {{ page.header-class }}">
       <h1>Planets of the Universe</h1>
-      {% include nav.html navclass = 'nav-top' %}
+      {% include nav.html navclass="nav__header" navitemclass="nav__item" navaclass="nav__header__a"%}
     </header>
 
-    {{content}}
+    {{ content }}
 
     <footer>
-      {% include nav.html navclass = 'nav-bottom' %}
-      <p>&copy; 2017 Planets of the Universe</p>
+      {% include nav.html navclass="nav__footer" navitemclass="nav__item" navaclass="nav__footer__a"%}
+      <p>&copy; 2018 Planets of the Universe</p>
     </footer>
-  </body>
+  </div>
+</body>
 </html>

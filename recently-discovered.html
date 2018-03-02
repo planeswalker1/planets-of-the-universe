@@ -1,14 +1,16 @@
 ---
 layout: news
+header-class: header--background-1
+title: Recently Discovered
 ---
 
-<h1>Recently Discovered Planets</h1>
+<h2>Recently Discovered Planets</h2>
 
 <ul>
-  <li>
-    {% for news in site.categories.recently-discovered %}
-    <a href="{{news.source}}">{{news.title}}</a>
-    <p>{{news.meta}}</p>
-  </li>
+  {% for news in site.categories.recently-discovered %}
+    <li>
+      <a href="{{ site.baseurl }}{{ news.url }}">{{news.title}}</a>
+      <p>{{news.meta}}</p>
+    </li>
   {% endfor %}
 </ul>

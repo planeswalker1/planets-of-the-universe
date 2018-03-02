@@ -1,0 +1,25 @@
+---
+layout: default
+title: Comets
+header-class: header--background-1
+---
+
+<h2>Comets</h2>
+
+<nav>
+  <ul>
+    {% for comet in site.comets %}
+    <li>
+      <a href="{{ site.baseurl }}/comets/{{ comet.slug }}" {% if page.url contains comet.slug %}class="nav__current"{% endif %}>{{ comet.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for comet in site.comets  %}
+  <h3>{{comet.title}}</h3>
+  <img src="{{ site.baseurl }}/images/{{ comet.image }}" alt="Photo of {{ comet.title }}">
+  <p>
+    <a href="{{ site.baseurl }}{{ comet.url }}">Read more about {{ comet.title }}</a>
+  </p>
+{% endfor %}

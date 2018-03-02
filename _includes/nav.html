@@ -1,7 +1,11 @@
 <nav>
-  <ul class="nav {{include.navclass}}">
-    <li><a href="{{site.baseurl}}/" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
-    <li><a href="{{site.baseurl}}/planets/" class="{% if page.url contains 'planets'%}active{% endif %}">Planets</a></li>
-    <li><a href="{{site.baseurl}}/news/" class="{% if page.url contains 'news' or page.url contains 'recently-discovered' %}active{% endif %}">News</a></li>
+  <ul class="{{ include.navclass }}">
+    <li class="{{ include.navitemclass }}"><a href="{{ site.baseurl }}/" class="{% if page.url == "/" %}nav__current{% endif %} {{ include.navaclass }}">Home</a></li>
+
+    <li class="{{ include.navitemclass }}"><a href="{{ site.baseurl }}/planets/" class="{% if page.url contains "planets" %}nav__current{% endif %} {{ include.navaclass }}">Planets</a></li>
+
+    <li class="{{ include.navitemclass }}"><a href="{{ site.baseurl }}/comets/" class="{% if page.url contains "comets" %}nav__current{% endif %} {{ include.navaclass }}">Comets</a></li>
+
+    <li class="{{ include.navitemclass }}"><a href="{{ site.baseurl }}/news/" class="{% if page.url contains "news" or page.url contains "recently-discovered" %}nav__current{% endif %} {{ include.navaclass }}">News</a></li>
   </ul>
 </nav>

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<h3>Comets</h3>
+<nav>
+  <ul>
+    {% for comet in site.comets %}
+    <li>
+      <a href="{{ site.baseurl }}/comets/{{ comet.slug }}" {% if page.url contains comet.slug %}class="nav__current"{% endif %}>{{ comet.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>
+<h2>{{ page.title }}</h2>
+<figure>
+  <img src="{{ site.baseurl }}/images/{{ page.image }}" alt="Photo of {{ page.title }}">
+  <figcaption>
+    {{ content }}
+  </figcaption>
+</figure>

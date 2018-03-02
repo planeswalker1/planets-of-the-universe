@@ -1,16 +1,18 @@
 ---
 layout: news
+header-class: header--background-2
 title: News
 meta: The most recent news and developments related to planets of the universe
 changefreq: weekly
 ---
-<h1>News</h1>
+
+<h2>Planetary News</h2>
 
 <ul>
   {% for news in site.categories.news %}
     <li>
-      <a href="{{site.baseurl}}{{news.url}}">{{news.title}}</a>
-      <p>{{news.meta}}</p>
+      <a href="{{ site.baseurl }}{{news.url}}">{{ news.title }}</a>
+      <p>{{ news.meta }}</p>
     </li>
   {% endfor %}
 </ul>

@@ -2,16 +2,15 @@
 layout: default
 ---
 
-<strong>Planet</strong>
-
+<h4>Planets</h4>
 <nav>
   <ul>
-    {% for planet in site.data.planet-types %}
-      <li>
-        <a href="{{site.baseurl}}/planets/{{planet.folder}}" class="{% if page.url contains planet.folder %}active{% endif %}">{{planet.title}}</a>
-      </li>
+    {%for data in site.data.planet-types %}
+    <li>
+      <a href="{{ site.baseurl }}/planets/{{ data.folder }}" {% if page.url contains data.folder %}class="nav__current"{% endif %}>{{ data.title }}</a>
+    </li>
     {% endfor %}
   </ul>
 </nav>
 
-{{content}}
+{{ content }}

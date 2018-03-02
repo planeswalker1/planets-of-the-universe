@@ -1,0 +1,46 @@
+.container {
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+.header {
+  color: #fff;
+  padding: 1em;
+}
+
+.header--background-1 {
+  background: #000531 url(../images/nebula.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.header--background-2 {
+  background: #000531 url(../images/nebula-2.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.nav__header,
+.nav__footer {
+  padding: 0;
+}
+
+.nav__header {
+  font-size: 1.25rem;
+}
+
+.nav__item {
+  margin: 0 10px;
+}
+
+.nav__header__a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__header__a:hover {
+  text-decoration: underline;
+}
+
+.nav__current {
+  background-color: #000531;
+  color: #fff;
+}
